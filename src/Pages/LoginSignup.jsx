@@ -52,7 +52,7 @@ const LoginSignup = ({ login }) => {
           localStorage.setItem('token', response?.data?.token)
           localStorage.setItem('role', response?.data?.user?.role)
           dispatch(setUser(response?.data?.user))
-        })
+        }).then(()=>{nav('/')})
         .catch(error => {
           console.error('API Error:', error?.response?.data || error?.message)
           setError(error.response?.data?.message || 'Something went wrong!')
