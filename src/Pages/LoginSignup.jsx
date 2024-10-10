@@ -187,7 +187,7 @@ const LoginSignup = ({ login }) => {
               disabled={submiting}
               className='w-full disabled:bg-disabledbutton bg-button text-white py-2 rounded-md hover:bg-hoverbutton transition-colors'
             >
-              Submit
+              {submiting ? 'Processing...' : login ? 'Login' : 'Signup'}
             </button>
             <p
               className='text-inputtext hover:underline mt-2 text-center cursor-pointer'
