@@ -11,7 +11,6 @@ import { Toaster } from 'react-hot-toast'
 import { useSelector } from 'react-redux'
 import NotFound from './Pages/NotFound'
 
-// Lazy load the components
 const LoginSignup = React.lazy(() => import('./Pages/LoginSignup'))
 const Dashboard = React.lazy(() => import('./Pages/Admin/Dashboard'))
 const PostEditor = React.lazy(() => import('./Pages/Admin/PostEditor'))
@@ -19,7 +18,6 @@ const Posts = React.lazy(() => import('./Pages/User/Posts'))
 const ReadBlog = React.lazy(() => import('./Pages/User/ReadBlog'))
 const Nav = React.lazy(() => import('./Components/Shared/Nav'))
 
-// ProtectedRoute for role-based access
 const ProtectedRoute = ({ role }) => {
   const user = useSelector(state => state.users)
   const role_ = localStorage.getItem('role')
