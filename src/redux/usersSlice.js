@@ -13,6 +13,8 @@ export const usersSlice = createSlice({
     },
     clearUser: state => {
       state.value = null
+      localStorage.removeItem('token')
+      localStorage.removeItem('role')
     }
   }
 })

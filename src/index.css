@@ -11,3 +11,7 @@
 body {
   @apply font-space;
 }
+
+.hover-transition {
+  @apply transform transition-transform duration-500 ease-in-out hover:scale-110
+}
