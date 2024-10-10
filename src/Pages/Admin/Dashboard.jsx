@@ -4,6 +4,7 @@ import { Plus } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import PostCard from '../../Components/Admin/PostCard'
 import PaginationComponent from '../../Components/Shared/PaginationComponent'
+import toast from 'react-hot-toast'
 
 const Dashboard = React.memo(() => {
   const [blogs, setBlogs] = useState([])
